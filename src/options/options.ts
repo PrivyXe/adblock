@@ -328,6 +328,19 @@ function setupEventListeners(): void {
       await loadState();
     }
   });
+
+  // Developer link
+  const linkSidebarDev = document.getElementById('linkSidebarDev');
+  if (linkSidebarDev) {
+    linkSidebarDev.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (typeof chrome.tabs !== 'undefined' && chrome.tabs.create) {
+        chrome.tabs.create({ url: 'https://x.com/PrivyXe' });
+      } else {
+        window.open('https://x.com/PrivyXe', '_blank');
+      }
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {

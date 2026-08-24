@@ -192,6 +192,28 @@ body {
   box-shadow: 0 0 8px var(--accent-emerald);
 }
 
+.sidebar-dev-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(148, 163, 184, 0.06);
+  transition: var(--transition);
+}
+
+.sidebar-dev-link:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--text-primary);
+}
+
+.dev-tag {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
 /* Main Content */
 .main-content {
   background-color: var(--bg-content);

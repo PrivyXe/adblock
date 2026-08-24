@@ -212,6 +212,18 @@ function setupListeners(): void {
     e.preventDefault();
     openOptions();
   });
+
+  const linkDev = document.getElementById('linkDev');
+  if (linkDev) {
+    linkDev.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (typeof chrome.tabs !== 'undefined' && chrome.tabs.create) {
+        chrome.tabs.create({ url: 'https://x.com/PrivyXe' });
+      } else {
+        window.open('https://x.com/PrivyXe', '_blank');
+      }
+    });
+  }
 }
 
 // Initialize Popup

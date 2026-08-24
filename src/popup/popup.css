@@ -497,6 +497,29 @@ body {
   box-shadow: 0 0 6px var(--accent-emerald);
 }
 
+.footer-dev {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: var(--transition);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.footer-dev:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--text-primary);
+}
+
+.dev-handle {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
 .footer-link {
   color: var(--accent-blue);
   text-decoration: none;
