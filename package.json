@@ -13,6 +13,7 @@
     "test": "node --test dist-test/**/*.test.js",
     "test:src": "tsc -p tsconfig.test.json && node --test dist-test/**/*.test.js",
     "audit": "node scripts/audit.js",
+    "package": "node scripts/package.js",
     "verify": "npm run typecheck && npm run validate-rules && npm run test:src && npm run build && npm run audit"
   },
   "keywords": [

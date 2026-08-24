@@ -8,5 +8,6 @@ dist-test/
 .DS_Store
 Thumbs.db
 *.log
+*.zip
 .vscode/
 .idea/
