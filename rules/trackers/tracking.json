@@ -1,0 +1,128 @@
+[
+  {
+    "id": 200021,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||connect.facebook.net/*/fbevents.js",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200022,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||facebook.com/tr/*",
+      "resourceTypes": ["image", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200023,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||analytics.tiktok.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200024,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||snap.licdn.com/li.lms-analytics/*",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200025,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||px.ads.linkedin.com/*",
+      "resourceTypes": ["image", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200026,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||static.ads-twitter.com/uwt.js",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200027,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||ct.pinterest.com/*",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 200028,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||sc-static.net/scevent.min.js",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200029,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||tr.snapchat.com/*",
+      "resourceTypes": ["image", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200030,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||alb.reddit.com/rp.gif",
+      "resourceTypes": ["image", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200031,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||q.quora.com/_/ad/*",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "ping", "other"]
+    }
+  },
+  {
+    "id": 200032,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||scorecardresearch.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200033,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||quantserve.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200034,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||bat.bing.com/*",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "ping", "other"]
+    }
+  }
+]

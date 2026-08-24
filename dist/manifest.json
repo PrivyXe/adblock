@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "AdBlock & Privacy Shield",
+  "version": "1.0.0",
+  "description": "High-performance, privacy-first ad and tracker blocker powered by Chrome DeclarativeNetRequest.",
+  "minimum_chrome_version": "102",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "AdBlock & Privacy Shield",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_ads",
+        "enabled": true,
+        "path": "rules/ads.json"
+      },
+      {
+        "id": "ruleset_trackers",
+        "enabled": true,
+        "path": "rules/trackers.json"
+      },
+      {
+        "id": "ruleset_sites",
+        "enabled": true,
+        "path": "rules/sites.json"
+      }
+    ]
+  }
+}

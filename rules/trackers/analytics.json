@@ -1,0 +1,173 @@
+[
+  {
+    "id": 200001,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||google-analytics.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "image", "other"]
+    }
+  },
+  {
+    "id": 200002,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||analytics.google.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "image", "other"]
+    }
+  },
+  {
+    "id": 200003,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||hotjar.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 200004,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||mixpanel.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200005,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||amplitude.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200006,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||segment.io^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200007,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||segment.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200008,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||heapanalytics.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200009,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||fullstory.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 200010,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||chartbeat.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200011,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||statcounter.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200012,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||clicky.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200013,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||mouseflow.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200014,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||crazyegg.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200015,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||clarity.ms^",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200016,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||googletagmanager.com/gtm.js*",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200017,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||googletagmanager.com/gtag/js*",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200018,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||mc.yandex.ru/*",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  },
+  {
+    "id": 200019,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||quantcount.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  }
+]

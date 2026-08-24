@@ -1,0 +1,47 @@
+[
+  {
+    "id": 200035,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||fpjs.io^",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200036,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||fingerprintjs.com^",
+      "resourceTypes": ["script", "xmlhttprequest", "other"]
+    }
+  },
+  {
+    "id": 200037,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||telemetry.sdk.*",
+      "resourceTypes": ["xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200038,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||browser-intake-datadoghq.com/*",
+      "resourceTypes": ["xmlhttprequest", "ping", "other"]
+    }
+  },
+  {
+    "id": 200039,
+    "priority": 200,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||bam.nr-data.net/*",
+      "resourceTypes": ["script", "xmlhttprequest", "image", "other"]
+    }
+  }
+]

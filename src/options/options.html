@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdBlock Shield — Dashboard & Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="brand-title">AdBlock Shield</h1>
+            <span class="brand-subtitle">Manifest V3 Core</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav-menu" role="tablist">
+        <button class="nav-item active" data-tab="tab-protection" role="tab" aria-selected="true" aria-controls="tab-protection">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Protection</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-whitelist" role="tab" aria-selected="false" aria-controls="tab-whitelist">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span>Whitelist</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-filter-lists" role="tab" aria-selected="false" aria-controls="tab-filter-lists">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+          <span>Filter Lists</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-statistics" role="tab" aria-selected="false" aria-controls="tab-statistics">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"/>
+            <line x1="12" y1="20" x2="12" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+          <span>Statistics</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-about" role="tab" aria-selected="false" aria-controls="tab-about">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+          <span>About & Privacy</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <span id="sidebarStatus">Protection Active</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Tab 1: Protection -->
+      <section id="tab-protection" class="tab-panel active" role="tabpanel">
+        <div class="panel-header">
+          <h2>Protection Settings</h2>
+          <p class="panel-desc">Configure core declarative network blocking filters and appearance preferences.</p>
+        </div>
+
+        <div class="settings-card">
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="optMasterToggle" class="setting-title">Master Protection</label>
+              <span class="setting-desc">Enable or disable all network-level blocking rules.</span>
+            </div>
+            <input type="checkbox" id="optMasterToggle" class="switch" checked>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="optBlockAds" class="setting-title">Block Advertisements</label>
+              <span class="setting-desc">Blocks ad networks, banner scripts, popunders, and known video ad endpoints.</span>
+            </div>
+            <input type="checkbox" id="optBlockAds" class="switch" checked>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="optBlockTrackers" class="setting-title">Block Trackers & Telemetry</label>
+              <span class="setting-desc">Prevents behavioral analytics, social pixels, device fingerprinting, and telemetry beacons.</span>
+            </div>
+            <input type="checkbox" id="optBlockTrackers" class="switch" checked>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <label for="optThemeSelect" class="setting-title">Interface Theme</label>
+              <span class="setting-desc">Choose between dark, light, or automatic system theme.</span>
+            </div>
+            <select id="optThemeSelect" class="select-input">
+              <option value="system">Follow System</option>
+              <option value="dark">Dark Theme</option>
+              <option value="light">Light Theme</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab 2: Whitelist -->
+      <section id="tab-whitelist" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <h2>Trusted Websites (Whitelist)</h2>
+          <p class="panel-desc">Domains added here bypass all network blocking rules (including subdomains).</p>
+        </div>
+
+        <!-- Add Domain Form -->
+        <div class="card add-domain-card">
+          <form id="formAddWhitelist" class="add-domain-form">
+            <input type="text" id="inputNewDomain" class="text-input" placeholder="e.g. example.com" autocomplete="off" required>
+            <button type="submit" class="btn btn-primary">Add Domain</button>
+          </form>
+          <div id="domainValidationMsg" class="validation-message"></div>
+        </div>
+
+        <!-- Whitelist Search & Toolbar -->
+        <div class="whitelist-toolbar">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="searchWhitelist" class="search-input" placeholder="Filter whitelist domains...">
+          </div>
+          <div class="toolbar-actions">
+            <span id="whitelistCountBadge" class="count-badge">0 domains</span>
+            <button id="btnClearWhitelist" class="btn btn-danger-outline" type="button">Clear All</button>
+          </div>
+        </div>
+
+        <!-- Whitelist Items List -->
+        <div id="whitelistContainer" class="whitelist-list">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- Tab 3: Filter Lists -->
+      <section id="tab-filter-lists" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <h2>DeclarativeNetRequest Filter Lists</h2>
+          <p class="panel-desc">Built-in static rulesets compiled into the extension manifest. All filtering runs natively on-device.</p>
+        </div>
+
+        <div class="rulesets-grid">
+          <div class="card ruleset-card">
+            <div class="ruleset-header">
+              <div class="ruleset-title-wrap">
+                <span class="ruleset-title">Advertisements Base</span>
+                <span class="badge badge-success">Static Ruleset</span>
+              </div>
+              <span id="rulesCountAds" class="rules-count">55 rules</span>
+            </div>
+            <p class="ruleset-desc">Blocks ad networks, banner scripts, popunder providers, and video ad delivery endpoints.</p>
+          </div>
+
+          <div class="card ruleset-card">
+            <div class="ruleset-header">
+              <div class="ruleset-title-wrap">
+                <span class="ruleset-title">Analytics & Trackers</span>
+                <span class="badge badge-success">Static Ruleset</span>
+              </div>
+              <span id="rulesCountTrackers" class="rules-count">38 rules</span>
+            </div>
+            <p class="ruleset-desc">Blocks web analytics, social conversion pixels, telemetry beacons, and fingerprinting APIs.</p>
+          </div>
+
+          <div class="card ruleset-card">
+            <div class="ruleset-header">
+              <div class="ruleset-title-wrap">
+                <span class="ruleset-title">Site-Specific Filters</span>
+                <span class="badge badge-success">Static Ruleset</span>
+              </div>
+              <span id="rulesCountSites" class="rules-count">2 rules</span>
+            </div>
+            <p class="ruleset-desc">Edge-case rules and specialized scripts for high-traffic media portals.</p>
+          </div>
+
+          <div class="card ruleset-card">
+            <div class="ruleset-header">
+              <div class="ruleset-title-wrap">
+                <span class="ruleset-title">Dynamic Whitelist Rules</span>
+                <span class="badge badge-info">Dynamic Rules</span>
+              </div>
+              <span id="rulesCountDynamic" class="rules-count">0 rules</span>
+            </div>
+            <p class="ruleset-desc">High-priority allowAllRequests rules generated dynamically for your whitelisted domains.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab 4: Statistics -->
+      <section id="tab-statistics" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <div class="header-with-action">
+            <div>
+              <h2>Protection Statistics</h2>
+              <p class="panel-desc">Aggregated blocking insights stored locally on your device.</p>
+            </div>
+            <button id="btnResetStats" class="btn btn-danger-outline" type="button">Reset Statistics</button>
+          </div>
+        </div>
+
+        <div class="stats-overview-grid">
+          <div class="stat-card">
+            <span class="stat-card-label">Total Ads Blocked</span>
+            <span id="statTotalAds" class="stat-card-value">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-label">Total Trackers Blocked</span>
+            <span id="statTotalTrackers" class="stat-card-value">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-label">Total Blocked Today</span>
+            <span id="statTotalToday" class="stat-card-value">0</span>
+          </div>
+        </div>
+
+        <div class="card table-card">
+          <h3 class="table-title">Top Filtered Websites</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Website Domain</th>
+                  <th>Ads Blocked</th>
+                  <th>Trackers Blocked</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="topSitesTableBody">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tab 5: About & Privacy -->
+      <section id="tab-about" class="tab-panel" role="tabpanel">
+        <div class="panel-header">
+          <h2>About & Privacy Guarantee</h2>
+          <p class="panel-desc">Architecture details, permission justification, and privacy commitments.</p>
+        </div>
+
+        <div class="card about-card">
+          <h3>Privacy-First Architecture</h3>
+          <p>This extension runs entirely in your local browser sandbox. It contains <strong>zero telemetry</strong>, <strong>zero external network calls</strong>, and <strong>zero analytics</strong>. Your browsing history is never tracked, logged, or sent to external servers.</p>
+        </div>
+
+        <div class="card permissions-card">
+          <h3>Declared Manifest Permissions</h3>
+          <table class="data-table permissions-table">
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Type</th>
+                <th>Justification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>declarativeNetRequest</code></td>
+                <td>API</td>
+                <td>Allows Chrome to block ad and tracker network requests declaratively at engine level without running background scripts on each packet.</td>
+              </tr>
+              <tr>
+                <td><code>storage</code></td>
+                <td>API</td>
+                <td>Stores your whitelist preferences, toggle states, and aggregated blocked counters locally on your device via <code>chrome.storage.local</code>.</td>
+              </tr>
+              <tr>
+                <td><code>&lt;all_urls&gt;</code></td>
+                <td>Host Permission</td>
+                <td>Enables declarative rules to intercept third-party ad server subresources requested across web pages you visit.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

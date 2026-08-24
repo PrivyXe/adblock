@@ -1,0 +1,182 @@
+[
+  {
+    "id": 100036,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||popads.net^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100037,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||propellerads.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100038,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||adcash.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100039,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||unityads.unity3d.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100040,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||ironsrc.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100041,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||mgid.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100042,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||adsterra.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100043,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||adblade.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100044,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||ad-delivery.net^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100045,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||adserver.org^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100046,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||serving-sys.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100047,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||innovid.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100048,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||moatads.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100049,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||amazon-adsystem.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100050,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||aax.amazon-adsystem.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100051,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||indexexchange.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100052,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||sonobi.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100053,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||zedo.com^",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100054,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||yandex.ru/ads/*",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  },
+  {
+    "id": 100055,
+    "priority": 100,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||an.yandex.ru/*",
+      "resourceTypes": ["sub_frame", "script", "image", "xmlhttprequest", "ping", "media", "websocket", "other"]
+    }
+  }
+]

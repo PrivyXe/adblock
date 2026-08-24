@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdBlock & Privacy Shield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-title">AdBlock Shield</h1>
+          <span class="brand-badge">MV3 Core</span>
+        </div>
+      </div>
+      <button id="btnOptions" class="icon-button" aria-label="Open Settings" title="Open Settings">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Master Shield Status -->
+    <section class="master-section">
+      <button id="btnMasterToggle" class="shield-toggle" aria-pressed="true" aria-label="Toggle Global Protection">
+        <div class="shield-graphic">
+          <div class="shield-pulse"></div>
+          <svg class="shield-icon" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path id="shieldCheck" d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="shield-status">
+          <span id="masterStatusText" class="status-title">Protected</span>
+          <span id="masterStatusDesc" class="status-subtitle">Network blocking active</span>
+        </div>
+      </button>
+    </section>
+
+    <!-- Active Site Card -->
+    <section class="card site-card">
+      <div class="site-header">
+        <div class="site-icon-wrapper">
+          <svg class="site-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="site-details">
+          <span id="activeDomainText" class="domain-name">Detecting tab...</span>
+          <span id="domainStatusBadge" class="domain-badge badge-active">Protected</span>
+        </div>
+      </div>
+
+      <!-- Site Quick Actions -->
+      <div id="siteControls" class="site-actions">
+        <button id="btnPauseSite" class="action-btn" type="button">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="4" height="16"/>
+            <rect x="14" y="4" width="4" height="16"/>
+          </svg>
+          <span id="pauseBtnText">Pause on Site</span>
+        </button>
+        <button id="btnWhitelistSite" class="action-btn" type="button">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span id="whitelistBtnText">Whitelist</span>
+        </button>
+      </div>
+
+      <!-- Internal page notice (shown only on chrome:// etc) -->
+      <div id="internalNotice" class="internal-notice hidden">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span>Browser internal page. Protection is not needed here.</span>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="card stats-card">
+      <div class="stats-header">
+        <span class="stats-title">Blocked Activity</span>
+        <span id="todayTotalBadge" class="today-badge">0 today</span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-label">Ads Blocked</span>
+          <span id="statAdsCount" class="stat-number">0</span>
+          <span id="statAdsSite" class="stat-site-sub">0 on this site</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Trackers Blocked</span>
+          <span id="statTrackersCount" class="stat-number">0</span>
+          <span id="statTrackersSite" class="stat-site-sub">0 on this site</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protection Feature Toggles -->
+    <section class="features-section">
+      <label class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">Ad Blocking</span>
+          <span class="toggle-desc">Block banners, popups, video ads</span>
+        </div>
+        <input type="checkbox" id="chkBlockAds" class="switch" checked>
+      </label>
+
+      <label class="toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-title">Tracker Blocking</span>
+          <span class="toggle-desc">Block analytics, fingerprinting, pixels</span>
+        </div>
+        <input type="checkbox" id="chkBlockTrackers" class="switch" checked>
+      </label>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-status">
+        <span class="pulse-dot"></span>
+        <span>DeclarativeNetRequest Active</span>
+      </div>
+      <a href="#" id="linkMoreSettings" class="footer-link">Dashboard &rarr;</a>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
