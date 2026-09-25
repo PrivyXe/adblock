@@ -39,7 +39,25 @@
   </a>
 </p>
 
+<!-- SISTER PROJECT BADGE (NULLOG) -->
+<p align="center">
+  <a href="https://nullog.fyi" target="_blank">
+    <img src="https://img.shields.io/badge/📱%20Mobile%20Companion-NULLOG%20Android%20Firewall-10B981?style=for-the-badge&logo=android&logoColor=white&labelColor=0B132B" alt="NULLOG Android Firewall" />
+  </a>
+  &nbsp;
+  <a href="https://nullog.fyi" target="_blank">
+    <img src="https://img.shields.io/badge/🌐%20nullog.fyi-Zero--Cloud%20Privacy-38BDF8?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0B132B" alt="Visit nullog.fyi" />
+  </a>
+</p>
+
 </div>
+
+<br/>
+
+> [!TIP]
+> ### 📱 Looking for System-Wide Protection on Android?
+> While this extension guards your **desktop Chromium browser**, our sister project **[NULLOG (nullog.fyi)](https://nullog.fyi)** brings **system-wide on-device ad, tracker, and background spyware blocking to Android**. It operates locally in memory via Linux TUN loopback with sub-0.4ms Radix-Trie matching across **every app on your phone**.  
+> 👉 [**Visit NULLOG Website (nullog.fyi)**](https://nullog.fyi) · [**Download NULLOG APK v1.0.2**](https://github.com/PrivyXe/NULLOG/releases/download/1.0.2/NULLOG-1-0-2.apk)
 
 <br/>
 
